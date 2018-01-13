@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D7C4120-4888-492B-A532-0D5B8EEBD4E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DuLieuPhanMem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DuLieuPhanMem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoiMatKhau.Designer.cs">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoiMatKhau.resx">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resource\MuonTheoTheLoai.rdlc" />
+    <EmbeddedResource Include="Resource\SoLanMuonTheoTheLoai.rdlc" />
+    <EmbeddedResource Include="Resource\TaiLieuDangMuon.rdlc" />
+    <EmbeddedResource Include="Resource\TaiLieuQuaHan.rdlc" />
+    <EmbeddedResource Include="Resource\Top10TaiLieuMuonNhieuNhat.rdlc" />
+    <None Include="DuLieuPhanMem.xsc">
+      <DependentUpon>DuLieuPhanMem.xsd</DependentUpon>
+    </None>
+    <None Include="DuLieuPhanMem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DuLieuPhanMem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DuLieuPhanMem.xss">
+      <DependentUpon>DuLieuPhanMem.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\icon\Add Book_32px.png" />
+    <Content Include="Resource\icon\Add File_96px.png" />
+    <Content Include="Resource\icon\Add Property_32px.png" />
+    <Content Include="Resource\icon\Add Property_96px.png" />
+    <Content Include="Resource\icon\Add User Male_32px.png" />
+    <Content Include="Resource\icon\Add User Male_96px.png" />
+    <Content Include="Resource\icon\Add_Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Admin_96px.png" />
+    <Content Include="Resource\icon\Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Books_96px.ico" />
+    <Content Include="Resource\icon\Books_96px.png" />
+    <Content Include="Resource\icon\Book_32px.png" />
+    <Content Include="Resource\icon\Borrow Book_32px.png" />
+    <Content Include="Resource\icon\Cancel_32px.png" />
+    <Content Include="Resource\icon\Cat Profile_96px.png" />
+    <Content Include="Resource\icon\Checkmark_32px.png" />
+    <Content Include="Resource\icon\Checkmark_96px.png" />
+    <Content Include="Resource\icon\Collaborator Male_32px.png" />
+    <Content Include="Resource\icon\Collaborator Male_96px.png" />
+    <Content Include="Resource\icon\Database_96px.png" />
+    <Content Include="Resource\icon\Delete Document_32px.png" />
+    <Content Include="Resource\icon\Delete Document_96px.png" />
+    <Content Include="Resource\icon\Delete File_96px.png" />
+    <Content Include="Resource\icon\Delete_32px.png" />
+    <Content Include="Resource\icon\Delete_96px.png" />
+    <Content Include="Resource\icon\Delete_Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Denied_32px.png" />
+    <Content Include="Resource\icon\Denied_96px.png" />
+    <Content Include="Resource\icon\Edit File_96px.png" />
+    <Content Include="Resource\icon\Edit Property_32px.png" />
+    <Content Include="Resource\icon\Edit Property_96px.png" />
+    <Content Include="Resource\icon\Edit_32px.png" />
+    <Content Include="Resource\icon\Edit_Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Edit_Book_32px.png" />
+    <Content Include="Resource\icon\Eye_32px.png" />
+    <Content Include="Resource\icon\Eye_96px.png" />
+    <Content Include="Resource\icon\File_96px.png" />
+    <Content Include="Resource\icon\Find User Male_32px.png" />
+    <Content Include="Resource\icon\Find User Male_96px.png" />
+    <Content Include="Resource\icon\Find_Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Find_Book_32px.png" />
+    <Content Include="Resource\icon\Folder_96px.png" />
+    <Content Include="Resource\icon\Forgot Password_32px.png" />
+    <Content Include="Resource\icon\Hand With Pen_32px.png" />
+    <Content Include="Resource\icon\icons8_Add_Book_96px_4.png" />
+    <Content Include="Resource\icon\icons8_Book_96px_1.png" />
+    <Content Include="Resource\icon\icons8_Book_Shelf_96px_1.png" />
+    <Content Include="Resource\icon\icons8_Find_Book_96px.png" />
+    <Content Include="Resource\icon\icons8_Remove_Book_96px_2.png" />
+    <Content Include="Resource\icon\Information_32px.png" />
+    <Content Include="Resource\icon\Information_96px.png" />
+    <Content Include="Resource\icon\Library_96px.png" />
+    <Content Include="Resource\icon\library_96px_Cx9_icon.ico" />
+    <Content Include="Resource\icon\Login_32px.png" />
+    <Content Include="Resource\icon\Minus_96px.png" />
+    <Content Include="Resource\icon\Multiply_32px.png" />
+    <Content Include="Resource\icon\Plus Math_16px.png" />
+    <Content Include="Resource\icon\Plus Math_32px.png" />
+    <Content Include="Resource\icon\Plus Math_96px.png" />
+    <Content Include="Resource\icon\Plus_32px.png" />
+    <Content Include="Resource\icon\Plus_96px.png" />
+    <Content Include="Resource\icon\Property Script_32px.png" />
+    <Content Include="Resource\icon\Property Script_96px.png" />
+    <Content Include="Resource\icon\Registration_32px.png" />
+    <Content Include="Resource\icon\Registration_96px.png" />
+    <Content Include="Resource\icon\Remove Book_32px.png" />
+    <Content Include="Resource\icon\Replay_32px.png" />
+    <Content Include="Resource\icon\Report Card_32px.png" />
+    <Content Include="Resource\icon\Report Card_96px.png" />
+    <Content Include="Resource\icon\Return Book_32px.png" />
+    <Content Include="Resource\icon\Save_32px.png" />
+    <Content Include="Resource\icon\Search Property_32px.png" />
+    <Content Include="Resource\icon\Search Property_96px.png" />
+    <Content Include="Resource\icon\Search_32px.png" />
+    <Content Include="Resource\icon\Search_96px.png" />
+    <Content Include="Resource\icon\Settings_96px.png" />
+    <Content Include="Resource\icon\Show_Book Shelf_32px.png" />
+    <Content Include="Resource\icon\Show_Book_32px.png" />
+    <Content Include="Resource\icon\Show_Property Script_32px.png" />
+    <Content Include="Resource\icon\Show_User_32px.png" />
+    <Content Include="Resource\icon\Shutdown_32px.png" />
+    <Content Include="Resource\icon\Shutdown_96px.png" />
+    <Content Include="Resource\icon\Subtract_32px.png" />
+    <Content Include="Resource\icon\Subtract_96px.png" />
+    <Content Include="Resource\icon\Support_96px.png" />
+    <Content Include="Resource\icon\User Groups_32px.png" />
+    <Content Include="Resource\icon\User_32px.png" />
+    <Content Include="Resource\icon\User_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{0A9DD6AB-5E62-461A-A429-B3B8D5B7E0B4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{C8AA3857-A871-4F25-BBA1-9B7BA5462015}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
